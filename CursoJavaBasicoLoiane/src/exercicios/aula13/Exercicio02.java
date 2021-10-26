@@ -1,3 +1,7 @@
+/* Faça um programa que peça um número e então mostre a mensagem
+ *"O número informado foi [número]".
+ */
+
 package exercicios.aula13;
 
 import java.util.Scanner;
