@@ -1,4 +1,4 @@
-// Faça um programa que peça o raio de um círculo, calcule e mostre sua área.
+// Faça um proggrama que converta metros para centímetros.
 
 package exercicios.aula13;
 
@@ -10,13 +10,14 @@ public class Exercicio05 {
         
         Scanner entrada = new Scanner(System.in);
         
-        double raio, area;
+        float metro;
+        int centimetro;
+                
+        System.out.print("Informe o valor em metros: ");
+        metro = entrada.nextFloat();
         
-        System.out.print("Informe o raio do círculo: ");
-        raio = entrada.nextDouble();
+        centimetro = (int) (metro * 100);
         
-        area = Math.PI * Math.pow(raio, 2);
-        
-        System.out.printf("Área do círculo: %.2f%n", area);
+        System.out.printf("Valor em centímetos: %d%n", centimetro);
     }
 }
