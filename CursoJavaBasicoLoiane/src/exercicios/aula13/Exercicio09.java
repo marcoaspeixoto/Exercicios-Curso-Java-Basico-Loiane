@@ -1,5 +1,5 @@
-/* Faça um programa que peça a temperatura em graus Farenhenit, transforme e mostre
- *a temperatura em graus Celsius.
+/* Faça um programa que peça a temperatura em graus Farenheit, transforme e mostre
+ * a temperatura em graus Celsius.
  */
 
 package exercicios.aula13;
