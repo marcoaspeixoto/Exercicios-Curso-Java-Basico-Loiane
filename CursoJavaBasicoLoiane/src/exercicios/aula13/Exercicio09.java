@@ -20,6 +20,6 @@ public class Exercicio09 {
         
         celsius = 5 * (farenheit - 32) / 9;
         
-        System.out.printf("Temperatura em graus Celsius: %.1f°C%n", celsius);
+        System.out.printf("%.1f°F = %.1f°C%n", farenheit, celsius);
     }
 }
