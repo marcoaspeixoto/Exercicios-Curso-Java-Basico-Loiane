@@ -13,18 +13,26 @@ public class Exercicio14 {
         
         double tamanhoArquivo;
         double  velocidadeLink;
-        int tempoDowload;
+        double  tempoDowload;
+        int tempoDownloadArredondado;
+        int tempoMinutos;
+        int tempoSegundos;
         
         Scanner entrada = new Scanner(System.in);
         
         System.out.print("Infome o tamanho do arquivo para download em MB: ");
         tamanhoArquivo = entrada.nextDouble();
         
-        System.out.print("Informe a velocidae do lin de internet em Mbps: ");
+        System.out.print("Informe a velocidae do link de internet em Mbps: ");
         velocidadeLink = entrada.nextDouble();
         
-        tempoDowload = (int) (tamanhoArquivo / (velocidadeLink / 8)) / 60;
+        tempoDowload = tamanhoArquivo / (velocidadeLink / 8);
         
-        System.out.printf("Tempo de download: %d minuto(s)%n", tempoDowload);        
+        tempoDownloadArredondado = (int) Math.round(tempoDowload);
+        
+        tempoMinutos = tempoDownloadArredondado / 60;
+        tempoSegundos = tempoDownloadArredondado % 60;
+        
+        System.out.printf("Tempo de download: %dmin%ds%n", tempoMinutos, tempoSegundos);
     }
 }
