@@ -11,9 +11,9 @@ public class Exercicio12 {
     
     public static void main(String[] args) {
         
-        Scanner entrada = new Scanner(System.in);
-        
         float altura, pesoIdeal;
+        
+        Scanner entrada = new Scanner(System.in);
         
         System.out.print("Informe sua altura em metros: ");
         altura = entrada.nextFloat();
