@@ -22,7 +22,7 @@ public class Exercicio13 {
         Scanner entrada = new Scanner(System.in);
         
         double ganhoHora, salarioBruto, impostoDeRenda, inss, sindicato,
-                salarioLiquido;
+                totalDescontos, salarioLiquido;
         int horasTrabalhadas;
         
         System.out.print("Informe quanto você ganha por hora: R$ ");
@@ -35,7 +35,8 @@ public class Exercicio13 {
         impostoDeRenda = salarioBruto * 0.11;
         inss = salarioBruto * 0.08;
         sindicato = salarioBruto * 0.05;
-        salarioLiquido = salarioBruto - impostoDeRenda - inss - sindicato;
+        totalDescontos = impostoDeRenda + inss + sindicato;
+        salarioLiquido = salarioBruto - totalDescontos;
         
         System.out.printf("+ Salário Bruto...: R$ %,.2f%n", salarioBruto);
         System.out.printf("- Imposto de Renda: R$ %,.2f%n", impostoDeRenda);
