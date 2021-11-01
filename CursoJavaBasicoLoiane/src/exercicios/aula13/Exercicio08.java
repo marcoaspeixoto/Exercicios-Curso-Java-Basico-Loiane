@@ -19,7 +19,7 @@ public class Exercicio08 {
         System.out.print("Informe quanto você ganha por hora: R$ ");
         ganhoHora = entrada.nextDouble();
         
-        System.out.print("Informe a quantidade de horas fechadas trabalhadas: ");
+        System.out.print("Informe a quantidade de horas fechadas trabalhadas no mês: ");
         horasTrabalhadas = entrada.nextInt();
         
         salario = ganhoHora * horasTrabalhadas;
