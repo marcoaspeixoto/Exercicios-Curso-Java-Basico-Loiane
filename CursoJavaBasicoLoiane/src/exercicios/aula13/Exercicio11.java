@@ -13,9 +13,9 @@ public class Exercicio11 {
     
     public static void main(String[] args) {
         
-        int inteiro1;
-        int inteiro2;
-        float real;
+        int numero1;
+        int numero2;
+        float numero3;
         int a;
         float b;
         float c;
@@ -23,17 +23,17 @@ public class Exercicio11 {
         Scanner entrada = new Scanner(System.in);
         
         System.out.print("Insira o primeiro número inteiro: ");
-        inteiro1 = entrada.nextInt();
+        numero1 = entrada.nextInt();
         
         System.out.print("Insira o segundo número inteiro: ");
-        inteiro2 = entrada.nextInt();
+        numero2 = entrada.nextInt();
         
         System.out.print("Insira o número real: ");
-        real = entrada.nextFloat();
+        numero3 = entrada.nextFloat();
         
-        a = (inteiro1 * 2) * (inteiro2 / 2);
-        b = (inteiro1 * 3) + real;
-        c = (float) Math.pow(real, 3);
+        a = (numero1 * 2) * (numero2 / 2);
+        b = (numero1 * 3) + numero3;
+        c = (float) Math.pow(numero3, 3);
         
         System.out.printf("a) O produto do dobro do primeiro com metade"
                 + "do segundo: %d%n", a);
