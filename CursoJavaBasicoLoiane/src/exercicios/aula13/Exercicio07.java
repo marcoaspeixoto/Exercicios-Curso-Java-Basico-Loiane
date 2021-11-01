@@ -13,10 +13,13 @@ public class Exercicio07 {
         Scanner entrada = new Scanner(System.in);
         
         System.out.printf("Insira a medida de um dos lados do quadrado: ");
-        float ladoQuadrado = entrada.nextFloat();
+        double ladoQuadrado = entrada.nextFloat();
         
-        float dobro = ladoQuadrado * 2;
+        double areaQuadrado = Math.pow(ladoQuadrado, 2);
         
+        double dobro = areaQuadrado * 2;
+        
+        System.out.printf("A área do quadrado é %.2f%n", areaQuadrado);
         System.out.printf("O dobro da área do quadrado é %.2f%n", dobro);
     }
 }
