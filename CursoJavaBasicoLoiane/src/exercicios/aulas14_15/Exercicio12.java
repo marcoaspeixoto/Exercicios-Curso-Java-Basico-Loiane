@@ -40,19 +40,20 @@ public class Exercicio12 {
         percentualFgts = 11.0;
         
         impostoDeRenda = salarioBruto * percentualIr / 100.0;
-        inss = salarioBruto * percentualInss / 100;
-        sindicato = salarioBruto * percentualSind / 100;
-        fgts = salarioBruto * percentualFgts / 100;
+        inss = salarioBruto * percentualInss / 100.0;
+        sindicato = salarioBruto * percentualSind / 100.0;
+        fgts = salarioBruto * percentualFgts / 100.0;
         totalDescontos = impostoDeRenda + inss + sindicato;
         salarioLiquido = salarioBruto - totalDescontos;
         
         System.out.println();
         
         System.out.printf("%-25s%14s%20s%n", "DESCRIÇÃO", "PERCENTUAL (%)", "VALOR (R$)");
-        System.out.printf("%-25s%14s%,20.2f%n", "Saĺário Bruto", "", salarioLiquido);
+        System.out.printf("%-25s%14s%,20.2f%n", "Saĺário Bruto", "", salarioBruto);
         System.out.printf("%-25s%14.0f%,20.2f%n", "(-) Imposto de Renda", percentualIr, impostoDeRenda);
         System.out.printf("%-25s%14.0f%,20.2f%n", "(-) INSS", percentualInss, inss);
         System.out.printf("%-25s%14.0f%,20.2f%n", "(-) Sindicato", percentualSind, sindicato);
+        System.out.printf("%-25s%14s%,20.2f%n", "FGTS", "", fgts);
         System.out.printf("%-25s%14s%,20.2f%n", "Total de descontos", "", totalDescontos);
         System.out.printf("%-25s%14s%,20.2f%n", "Salário Líquido", "", salarioLiquido);
     }
