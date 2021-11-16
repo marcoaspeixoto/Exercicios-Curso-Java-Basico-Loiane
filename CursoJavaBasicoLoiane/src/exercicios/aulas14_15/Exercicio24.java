@@ -44,18 +44,18 @@ public class Exercicio24 {
 
         if (resultado > 0 || resultado < 0) {
             if (resultado % 2 == 0) {
-                System.out.println("É par");
+                System.out.println("Par");
             } else {
-                System.out.println("É impar");
+                System.out.println("Ímpar");
 
             }
         }
 
         if (resultado > 0) {
-            System.out.println("É positivo");
+            System.out.println("Positivo");
         } else {
             if (resultado < 0) {
-                System.out.println("É negativo");
+                System.out.println("Negativo");
             }
         }
     }
