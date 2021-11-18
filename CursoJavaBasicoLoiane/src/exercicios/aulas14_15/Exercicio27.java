@@ -6,30 +6,30 @@ public class Exercicio27 {
     
     public static void main(String[] args) {
         
-        double qtdMorangos, qtdMacas, valorMorangos, valorMacas, valorTotal, pesoTotal;
+        double pesoMorangos, pesoMacas, valorMorangos, valorMacas, valorTotal, pesoTotal;
         
         Scanner entrada = new Scanner(System.in);
         
         System.out.print("Informe a quantidade em kg de morangos comprada: ");
-        qtdMorangos = entrada.nextDouble();
+        pesoMorangos = entrada.nextDouble();
         
         System.out.print("Informe a quantidade em kg de maçãs comprada: ");
-        qtdMacas = entrada.nextDouble();
+        pesoMacas = entrada.nextDouble();
         
-        if (qtdMorangos <= 5.0) {
-            valorMorangos = qtdMorangos * 2.50;
+        if (pesoMorangos <= 5.0) {
+            valorMorangos = pesoMorangos * 2.50;
         } else {
-            valorMorangos = qtdMorangos * 2.20;
+            valorMorangos = pesoMorangos * 2.20;
         }
         
-        if (qtdMacas <= 5.0) {
-            valorMacas = qtdMacas * 1.80;
+        if (pesoMacas <= 5.0) {
+            valorMacas = pesoMacas * 1.80;
         } else {
-            valorMacas = qtdMacas * 1.50;
+            valorMacas = pesoMacas * 1.50;
         }
         
         valorTotal = valorMorangos + valorMacas;
-        pesoTotal = qtdMorangos + qtdMacas;
+        pesoTotal = pesoMorangos + pesoMacas;
         
         if (pesoTotal >= 8 || valorTotal >= 25.00 ) {
             valorTotal *= 1 - 0.10;
