@@ -1,4 +1,4 @@
-package exercicios.aulas14_15;
+ package exercicios.aulas14_15;
 
 import java.util.Scanner;
 
@@ -26,10 +26,12 @@ public class Exercicio16 {
         } else {
             delta = (Math.pow(b, 2.0) - 4.0 * a * c);
             if (delta < 0.0) {
+                System.out.printf("Delta = %.1f%n", delta);
                 System.out.println("A equação não possui raízes reais");
             } else {
                 x1 = ((-b + Math.sqrt(delta)) / (2.0 * a));
                 if (delta == 0.0) {
+                    System.out.printf("Delta = %.1f%n", delta);
                     System.out.println("A equação possui apenas uma raiz real");
                     if (x1  == (int) x1) { // retira a parte fracionária caso esta for zero
                         System.out.printf("x = %.0f%n", x1);
