@@ -20,19 +20,19 @@ public class Exercicio14 {
         
         media = (nota1 + nota2) / 2;
         
-        if (media > 9.0 && media <= 10.0) {
+        if (media >= 9.0 && media <= 10.0) {
             conceito = 'A';
             mensagem = "APROVADO";
         } else {
-            if (media > 7.5 && media <= 9.0) {
+            if (media >= 7.5 && media < 9.0) {
                 conceito = 'B';
                 mensagem = "APROVADO";
             } else {
-                if (media > 6.0 && media <= 7.5) {
+                if (media >= 6.0 && media < 7.5) {
                     conceito = 'C';
                     mensagem = "APROVADO";
                 } else {
-                    if (media > 4.0 && media <= 6.0) {
+                    if (media >= 4.0 && media < 6.0) {
                         conceito = 'D';
                         mensagem = "REPROVADO";
                     } else {
