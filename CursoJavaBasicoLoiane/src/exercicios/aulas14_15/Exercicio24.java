@@ -6,8 +6,9 @@ public class Exercicio24 {
 
     public static void main(String[] args) {
 
-        int numero1, numero2, resultado;
+        int numero1, numero2, resultado = 0;
         char operacao;
+        boolean operacaoValida = true;
 
         Scanner entrada = new Scanner(System.in);
 
@@ -36,26 +37,32 @@ public class Exercicio24 {
                     resultado = numero1 * numero2;
                     System.out.printf("%d * %d = %d%n", numero1, numero2, resultado);
                 } else {
-                    resultado = numero1 / numero2;
-                    System.out.printf("%d / %d = %d%n", numero1, numero2, resultado);
+                    if (operacao == '/') {
+                        resultado = numero1 / numero2;
+                        System.out.printf("%d / %d = %d%n", numero1, numero2, resultado);
+                    } else {
+                        System.out.println("Operação inválida");
+                        operacaoValida = false;
+                    }
                 }
             }
         }
 
-        if (resultado > 0 || resultado < 0) {
-            if (resultado % 2 == 0) {
-                System.out.println("Par");
-            } else {
-                System.out.println("Ímpar");
-
+        if (operacaoValida) {
+            if (resultado > 0 || resultado < 0) {
+                if (resultado % 2 == 0) {
+                    System.out.println("Par");
+                } else {
+                    System.out.println("Ímpar");
+                }
             }
-        }
 
-        if (resultado > 0) {
-            System.out.println("Positivo");
-        } else {
-            if (resultado < 0) {
-                System.out.println("Negativo");
+            if (resultado > 0) {
+                System.out.println("Positivo");
+            } else {
+                if (resultado < 0) {
+                    System.out.println("Negativo");
+                }
             }
         }
     }
