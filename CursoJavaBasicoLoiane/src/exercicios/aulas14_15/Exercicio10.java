@@ -10,7 +10,8 @@ public class Exercicio10 {
         
         Scanner entrada = new Scanner(System.in);
         
-        System.out.print("Informe o turno: ");
+        System.out.println("M - Matutino, V - Vespertino, N - Noturno");
+        System.out.print("Informe a letra do turno: ");
         turno = entrada.next();
         
         if (turno.equalsIgnoreCase("m")) {
