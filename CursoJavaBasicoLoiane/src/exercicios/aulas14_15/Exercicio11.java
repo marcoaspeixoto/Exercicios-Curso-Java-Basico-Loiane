@@ -6,7 +6,8 @@ public class Exercicio11 {
     
     public static void main(String[] args) {
         
-        double salario, novoSalario, percentual, valorAumento;
+        double salario, novoSalario, valorAumento;
+        int percentual;
         
         Scanner entrada = new Scanner(System.in);
         
@@ -14,24 +15,24 @@ public class Exercicio11 {
         salario = entrada.nextDouble();
         
         if (salario <= 280.0) {
-            percentual = 20.0;
+            percentual = 20;
             } else {
-            if (salario > 280.0 && salario <= 700.0) {
-                percentual = 15.0;
+            if (salario > 280.0 && salario == 700.0) {
+                percentual = 15;
             } else {
-                if (salario > 700 && salario <= 1500) {
-                    percentual = 10.0;
+                if (salario >= 700 && salario < 1500) {
+                    percentual = 10;
                 } else {
-                    percentual = 5.0;
+                    percentual = 5;
                 }
             }
         }
         
-        novoSalario = salario * (1 + percentual / 100);
-        valorAumento = novoSalario - salario;
+        valorAumento = salario * percentual / 100;
+        novoSalario = salario + valorAumento;
         
         System.out.printf("Salário antes do reajuste.....: R$ %,.2f%n", salario);
-        System.out.printf("Percentual de aumento aplicado: %.1f%%%n", percentual);
+        System.out.printf("Aumento aplicado..............: %d%%%n", percentual);
         System.out.printf("Valor do aumento..............: R$ %.2f%n", valorAumento);
         System.out.printf("Novo salário..................: R$ %,.2f%n", novoSalario);
     }
