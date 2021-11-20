@@ -7,7 +7,7 @@ public class Exercicio26 {
     public static void main(String[] args) {
         
         double litros, precoAPagar = 0.0, precoLGasolina = 2.50, precoLAlcool = 1.90;
-        char tipoCombustivel;
+        String tipoCombustivel;
         
         Scanner entrada = new Scanner(System.in);
         
@@ -15,22 +15,22 @@ public class Exercicio26 {
         litros = entrada.nextDouble();
         
         System.out.print("Informe o tipo de combustível (A - álcool, G - gasolina): ");
-        tipoCombustivel = entrada.next().charAt(0);
+        tipoCombustivel = entrada.next();
         
-        if (tipoCombustivel == 'A') {
+        if (tipoCombustivel.equalsIgnoreCase("a")) {
             if (litros <= 20) {
-                precoLAlcool = precoLAlcool * (1 - 0.03);
+                precoLAlcool *= 1 - 0.03;
             } else {
-                precoLAlcool = precoLAlcool * (1 - 0.05);
+                precoLAlcool *= 1 - 0.05;
             }
             precoAPagar = litros * precoLAlcool;
         }
         
-        if (tipoCombustivel == 'G') {
+        if (tipoCombustivel.equals("g")) {
             if (litros <= 20) {
-                precoLGasolina = precoLGasolina * (1 - 0.04);
+                precoLGasolina *= 1 - 0.04;
             } else {
-                precoLGasolina = precoLGasolina * (1 - 0.06);
+                precoLGasolina *= 1 - 0.06;
             }
             precoAPagar = litros * precoLGasolina;
         }
