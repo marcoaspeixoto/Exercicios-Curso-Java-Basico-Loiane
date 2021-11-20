@@ -6,20 +6,20 @@ public class Exercicio10 {
     
     public static void main(String[] args) {
         
-        char turno;
+        String turno;
         
         Scanner entrada = new Scanner(System.in);
         
         System.out.print("Informe o turno: ");
-        turno = entrada.next().charAt(0);
+        turno = entrada.next();
         
-        if (turno == 'M') {
+        if (turno.equalsIgnoreCase("m")) {
             System.out.println("Bom dia!");
         } else {
-            if (turno == 'V') {
+            if (turno.equalsIgnoreCase("v")) {
                 System.out.println("Boa tarde!");
             } else {
-                if (turno == 'N') {
+                if (turno.equalsIgnoreCase("n")) {
                     System.out.println("Boa noite!");
                 } else {
                     System.out.println("Valor inválido!");
