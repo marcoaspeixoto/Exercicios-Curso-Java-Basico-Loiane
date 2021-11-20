@@ -40,6 +40,7 @@ public class Exercicio16 {
                     }
                 }
                 if (delta > 0.0) {
+                    System.out.printf("Delta = %.1f%n", delta);
                     x2 = ((-b - Math.sqrt(delta)) / (2.0 * a));
                         System.out.println("A equação possui duas raizes reais");
                     if (x1  == (int) x1) { // retira a parte fracionária caso esta for zero
