@@ -16,13 +16,13 @@ public class Exercicio27 {
         System.out.print("Informe a quantidade em kg de maçãs comprada: ");
         pesoMacas = entrada.nextDouble();
         
-        if (pesoMorangos <= 5.0) {
+        if (pesoMorangos <= 5) {
             valorMorangos = pesoMorangos * 2.50;
         } else {
             valorMorangos = pesoMorangos * 2.20;
         }
         
-        if (pesoMacas <= 5.0) {
+        if (pesoMacas <= 5) {
             valorMacas = pesoMacas * 1.80;
         } else {
             valorMacas = pesoMacas * 1.50;
