@@ -7,7 +7,7 @@ public class Exercicio28 {
     public static void main(String[] args) {
 
         int codigoCarne, codigoPgamento;
-        double pesoCarne, valorTotal, valorAPagar, valorDesconto;
+        double pesoCarne, precoKg, subTotal, valorAPagar, valorDesconto = 0;
         String tipoCarne, tipoPagamento;
 
         Scanner entrada = new Scanner(System.in);
@@ -26,48 +26,45 @@ public class Exercicio28 {
         System.out.print("Informe o código do tipo de pagamento: ");
         codigoPgamento = entrada.nextInt();
 
-        if (pesoCarne <= 5.0) {
-            if (codigoCarne == 1) {
-                valorTotal = pesoCarne * 4.90;
-                tipoCarne = "Filé Duplo";
+        if (codigoCarne == 1) {
+            if (pesoCarne < 5) {
+                precoKg = 4.90;
             } else {
-                if (codigoCarne == 2) {
-                    valorTotal = pesoCarne * 5.90;
-                    tipoCarne = "Alcatra";
-                } else {
-                    valorTotal = pesoCarne * 6.90;
-                    tipoCarne = "Picanha";
-                }
+                precoKg = 5.80;
             }
+            tipoCarne = "Filé Duplo";
         } else {
-            if (codigoCarne == 1) {
-                valorTotal = pesoCarne * 5.80;
-                tipoCarne = "Filé Duplo";
-            } else {
-                if (codigoCarne == 2) {
-                    valorTotal = pesoCarne * 6.80;
-                    tipoCarne = "Alcatra";
+            if (codigoCarne == 2) {
+                if (pesoCarne < 5) {
+                    precoKg = 5.90;
                 } else {
-                    valorTotal = pesoCarne * 7.80;
-                    tipoCarne = "Picanha";
+                    precoKg = 6.80;
                 }
+                tipoCarne = "Alcatra";
+            } else {
+                if (pesoCarne < 5) {
+                    precoKg = 6.90;
+                } else {
+                    precoKg = 7.80;
+                }
+                tipoCarne = "Picanha";
             }
         }
 
         tipoPagamento = "Dinheiro";
-        valorDesconto = 0.0;
-        valorAPagar = valorTotal;
+        subTotal = pesoCarne * precoKg;
+        valorAPagar = subTotal;
 
         if (codigoPgamento == 2) {
-            valorAPagar = valorTotal * (1 - 0.05);
+            valorDesconto = subTotal * 0.05;
             tipoPagamento = "Cartão Tabajara";
-            valorDesconto = valorTotal - valorAPagar;
+            valorAPagar = subTotal - valorDesconto;
         }
 
         System.out.println("CUPOM FISCAL");
         System.out.printf("Tipo de carne....: %s%n", tipoCarne);
         System.out.printf("Peso.............: %.1f kg%n", pesoCarne);
-        System.out.printf("Valor total......: R$ %.2f%n", valorTotal);
+        System.out.printf("Valor total......: R$ %.2f%n", subTotal);
         System.out.printf("Tipo de pagamento: %s%n", tipoPagamento);
         System.out.printf("Valor do desconto: R$ %.2f%n", valorDesconto);
         System.out.printf("Valor a pagar....: R$ %.2f%n", valorAPagar);
